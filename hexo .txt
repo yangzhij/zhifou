@@ -1,0 +1,44 @@
+1、下载安装node.js           #https://nodejs.org/zh-cn/
+
+2、在E盘创建一个目录blog
+
+3、进入该目录，右键git base  开始安装hexo
+
+https://hexo.io/zh-cn/index.html   安装hexo
+
+
+
+创建一个新文件，在根目录下执行命令  如， hexo new post "哇哈哈"
+
+
+
+https://www.jianshu.com/p/dc416787f2cb
+
+
+添加图片
+![https://www.baidu.com/img/bd_logo1.png](https://www.baidu.com/img/bd_logo1.png) 
+
+
+配置_config.yml中的deploy：
+
+deploy:
+ type: git
+ repo:git@github.com:your_github_user_name/your_github_user_name.github.io.git
+ branch: master
+
+
+
+<font color="#FF0000"> 我可以设置这一句的颜色哈哈 </font> 
+<font size=6> 我还可以设置这一句的大小嘻嘻 </font> 
+<font size=5 color="#FF0000"> 我甚至可以设置这一句的颜色和大小呵呵</font> 
+
+
+
+<center>这一行需要居中</center>
+
+
+
+
+
+
+
