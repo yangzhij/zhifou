@@ -38,7 +38,9 @@ deploy:
 
 
 博客加密
-1.在根目录下执行
+1.在你的hexo根目录的package.json文件夹中添加，有的话就不用了：
+"hexo-blog-encrypt": "2.0.*"
+然后在根目录下执行：
 npm install --save-dev eslint
 npm install
 2.找到根目录下的_config.yml文件，添加如下：
