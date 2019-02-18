@@ -1,25 +1,25 @@
-1¡¢ÏÂÔØ°²×°node.js           #https://nodejs.org/zh-cn/
+1ã€ä¸‹è½½å®‰è£…node.js           #https://nodejs.org/zh-cn/
 
-2¡¢ÔÚEÅÌ´´½¨Ò»¸öÄ¿Â¼blog
+2ã€åœ¨Eç›˜åˆ›å»ºä¸€ä¸ªç›®å½•blog
 
-3¡¢½øÈë¸ÃÄ¿Â¼£¬ÓÒ¼ügit base  ¿ªÊ¼°²×°hexo
+3ã€è¿›å…¥è¯¥ç›®å½•ï¼Œå³é”®git base  å¼€å§‹å®‰è£…hexo
 
-https://hexo.io/zh-cn/index.html   °²×°hexo
+https://hexo.io/zh-cn/index.html   å®‰è£…hexo
 
 
 
-´´½¨Ò»¸öĞÂÎÄ¼ş£¬ÔÚ¸ùÄ¿Â¼ÏÂÖ´ĞĞÃüÁî  Èç£¬ hexo new post "ÍÛ¹ş¹ş"
+åˆ›å»ºä¸€ä¸ªæ–°æ–‡ä»¶ï¼Œåœ¨æ ¹ç›®å½•ä¸‹æ‰§è¡Œå‘½ä»¤  å¦‚ï¼Œ hexo new post "å“‡å“ˆå“ˆ"
 
 
 
 https://www.jianshu.com/p/dc416787f2cb
 
 
-Ìí¼ÓÍ¼Æ¬
+æ·»åŠ å›¾ç‰‡
 ![https://www.baidu.com/img/bd_logo1.png](https://www.baidu.com/img/bd_logo1.png) 
 
 
-ÅäÖÃ_config.ymlÖĞµÄdeploy£º
+é…ç½®_config.ymlä¸­çš„deployï¼š
 
 deploy:
  type: git
@@ -28,17 +28,31 @@ deploy:
 
 
 
-<font color="#FF0000"> ÎÒ¿ÉÒÔÉèÖÃÕâÒ»¾äµÄÑÕÉ«¹ş¹ş </font> 
-<font size=6> ÎÒ»¹¿ÉÒÔÉèÖÃÕâÒ»¾äµÄ´óĞ¡ÎûÎû </font> 
-<font size=5 color="#FF0000"> ÎÒÉõÖÁ¿ÉÒÔÉèÖÃÕâÒ»¾äµÄÑÕÉ«ºÍ´óĞ¡ºÇºÇ</font> 
+<font color="#FF0000"> æˆ‘å¯ä»¥è®¾ç½®è¿™ä¸€å¥çš„é¢œè‰²å“ˆå“ˆ </font> 
+<font size=6> æˆ‘è¿˜å¯ä»¥è®¾ç½®è¿™ä¸€å¥çš„å¤§å°å˜»å˜» </font> 
+<font size=5 color="#FF0000"> æˆ‘ç”šè‡³å¯ä»¥è®¾ç½®è¿™ä¸€å¥çš„é¢œè‰²å’Œå¤§å°å‘µå‘µ</font> 
 
 
 
-<center>ÕâÒ»ĞĞĞèÒª¾ÓÖĞ</center>
+<center>è¿™ä¸€è¡Œéœ€è¦å±…ä¸­</center>
 
 
-
-
-
-
+åšå®¢åŠ å¯†
+1.åœ¨æ ¹ç›®å½•ä¸‹æ‰§è¡Œ
+npm install --save-dev eslint
+npm install
+2.æ‰¾åˆ°æ ¹ç›®å½•ä¸‹çš„_config.ymlæ–‡ä»¶ï¼Œæ·»åŠ å¦‚ä¸‹ï¼š
+# Security
+##
+encrypt:
+    enable: true
+ 3. åœ¨ä½ è¦åŠ å¯†çš„æ–‡ç« å¤´éƒ¨å†™å…¥passwordï¼Œä¾‹å¦‚ï¼š
+ ---
+title: Hello World
+date: 2018-05-10 12:16:08
+password: abc123
+tag:
+---
+    
+    
 
