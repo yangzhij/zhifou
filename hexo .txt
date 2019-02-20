@@ -5,7 +5,7 @@
 3、进入该目录，右键git base  开始安装hexo
 
 https://hexo.io/zh-cn/index.html   安装hexo
-
+https://zhuanlan.zhihu.com/p/35668237
 
 
 创建一个新文件，在根目录下执行命令  如， hexo new post "哇哈哈"
@@ -90,4 +90,4 @@ rsehodwfhd
 |张二|男|22|贵州大学|15000|
 |张一|女|20|北京大学|12000|
     
-
+网易云https://music.163.com/#/song?id=449818741    生成外链播放器
