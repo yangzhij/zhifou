@@ -12,7 +12,7 @@ https://hexo.io/zh-cn/index.html   安装hexo
 
 
 
-https://www.jianshu.com/p/dc416787f2cb
+https://www.jianshu.com/p/dc416787f2cb      Hexo常用命令 
 
 
 添加图片
