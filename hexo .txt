@@ -6,6 +6,7 @@
 
 https://hexo.io/zh-cn/index.html   安装hexo
 https://zhuanlan.zhihu.com/p/35668237
+https://blog.csdn.net/grave2015/article/details/79961843
 
 
 创建一个新文件，在根目录下执行命令  如， hexo new post "哇哈哈"
