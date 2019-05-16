@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE mycat:schema SYSTEM "schema.dtd">
+<mycat:schema xmlns:mycat="http://io.mycat/">
+	<!--下面的name是mycat逻辑卷，和mysql里的数据库同名-->
+	<schema name="micro_game" checkSQLschema="false" sqlMaxLimit="1000" dataNode="dn1">
+	<schema name="micro_account" checkSQLschema="false" sqlMaxLimit="1000" dataNode="dn1">
+		<!-- <table name="oc_call" primaryKey="ID" dataNode="dn1$0-743" rule="latest-month-calldate"
+			/> -->
+	</schema>
+	<!-- <dataNode name="dn1$0-743" dataHost="localhost1" database="db$0-743"
+		/> -->
+		<!--定义mycat数据节点,数据库和上面对应-->
+	<dataNode name="dn1" dataHost="localhost1" database="micro_game" />
+	<dataNode name="dn1" dataHost="localhost1" database="micro_accont" />
+	<!--<dataNode name="dn4" dataHost="sequoiadb1" database="SAMPLE" />
+	 <dataNode name="jdbc_dn1" dataHost="jdbchost" database="db1" />
+	<dataNode	name="jdbc_dn2" dataHost="jdbchost" database="db2" />
+	<dataNode name="jdbc_dn3" 	dataHost="jdbchost" database="db3" /> -->
+	<dataHost name="localhost1" maxCon="1000" minCon="10" balance="1"
+			  writeType="0" dbType="mysql" dbDriver="native" switchType="1"  slaveThreshold="100">
+		<heartbeat>select user()</heartbeat>
+		
+		<!--<heartbeat>show slave status</heartbeat>不建议使用这个，主从切换后，因为原来的主没有开启slave，这时候这条命令就会报错-- >
+		
+		<!-- can have multi write hosts，真实数据库地址。host随意-->
+		<writeHost host="hostM1" url="172.20.100.247:3305" user="root" password="123456" />      
+		<readHost host="hostS2" url="172.20.100.250:3305" user="root" password="123456" />
+		</writeHost>
+	</dataHost>
+
+</mycat:schema>
