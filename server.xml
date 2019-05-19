@@ -32,7 +32,7 @@
 		<!--<property name="backSocketNoDelay">1</property>-->
 		<!--<property name="frontSocketNoDelay">1</property>-->
 		<!--<property name="processorExecutor">16</property>-->
-		<!--mycat默认监听端口是8066,可以改成别的端口-->
+		<!--mycat默认监听端口是8066,可以改成别的端口,比如3306，这样的话mysql的默认端口就得改了,看情况吧,不改也行-->
 			<property name="serverPort">8066</property> <property name="managerPort">9066</property> 
 			<property name="idleTimeout">300000</property> <property name="bindIp">0.0.0.0</property> 
 			<property name="frontWriteQueueSize">4096</property> <property name="processors">32</property>
