@@ -75,6 +75,7 @@
 	<user name="user-game" defaultAccount="true">
 		<property name="password">Fei.lv:bin-1234!</property>
 		<property name="schemas">micro_game</property>	
+		
 	</user>
 
     <user name="test" defaultAccount="true">
