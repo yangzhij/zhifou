@@ -1,0 +1,72 @@
+### This file is an example authorization file for svnserve.
+### Its format is identical to that of mod_authz_svn authorization
+### files.
+### As shown below each section defines authorizations for the path and
+### (optional) repository specified by the section name.
+### The authorizations follow. An authorization line can refer to:
+###  - a single user,
+###  - a group of users defined in a special [groups] section,
+###  - an alias defined in a special [aliases] section,
+###  - all authenticated users, using the '$authenticated' token,
+###  - only anonymous users, using the '$anonymous' token,
+###  - anyone, using the '*' wildcard.
+###
+### A match can be inverted by prefixing the rule with '~'. Rules can
+### grant read ('r') access, read-write ('rw') access, or no access
+### ('').
+
+[aliases]
+# joe = /C=XZ/ST=Dessert/L=Snake City/O=Snake Oil, Ltd./OU=Research Institute/CN=Joe Average
+
+[groups]
+# harry_and_sally = harry,sally
+# harry_sally_and_joe = harry,sally,&joe
+quanju_duxie = admin,echo,ewan,felix,ocean,richard,max,cici
+quanju_du = gaters,kevin,tomntiger
+kefu_r = aaa,bbb,ccc,ddd,eee
+kefu_w = aaa,bbb,ccc,ddd,eee,fff
+
+# [/foo/bar]
+# harry = rw
+# &joe = r
+# * =
+
+# [repository:/baz/fuz]
+# @harry_and_sally = rw
+# * = r
+
+[/]
+admin = rw
+echo = rw
+ewan = rw
+felix = rw
+gaters = r
+kevin = r
+ocean = rw
+richard = rw
+tomntiger = r
+ahai = rw
+bill = rw
+
+[/产品/2-游戏配置]
+@quanju_duxie = rw
+@quanju_du = r
+* =
+
+[/产品/3-产品研发文档]
+@quanju_duxie = rw
+@quanju_du = r
+* =
+
+[/客服建议]
+@kefu_r = r
+@kefu_w = rw 
+
+ 
+
+
+
+
+
+
+
