@@ -48,6 +48,8 @@ tomntiger = r
 ahai = rw
 bill = rw
 
+//下面这些可以不要
+
 [/产品/2-游戏配置]
 @quanju_duxie = rw
 @quanju_du = r
