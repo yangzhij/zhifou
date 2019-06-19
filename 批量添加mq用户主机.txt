@@ -1,0 +1,49 @@
+mq 创建用户、虚拟主机、密码、权限
+
+--可编辑一个脚本，批量执行
+
+1.编写用户文件，格式为：用户名/虚拟主机，根据实际情况自定义。如下
+vi user.txt
+config/config-server        
+account/account-service
+log/log-service
+control/control
+agent/agent
+game/game-lobby
+landlord/landlord
+baccarat/baccarat
+cattle/hundred-cattle
+保存退出
+
+2.编写执行脚本，如下
+vi adduser.sh
+#!/bin/bash
+aa=`cat user.txt`
+pw="admin123"
+pz="config-server"
+for i in $aa
+do
+        user=`echo $i|awk -F/ {'print$1'}`
+        host=`echo $i|awk -F/ {'print$2'}`
+rabbitmqctl add_user $user $pw
+rabbitmqctl set_user_tags $user  administrator
+rabbitmqctl add_vhost $host
+rabbitmqctl  set_permissions -p ${host}  ${user} '.*' '.*' '.*' 
+rabbitmqctl  set_permissions -p ${pz}  ${user} '.*' '.*' '.*' 
+done
+保存退出
+
+
+///*
+
+#添加用户并设置密码
+rabbitmqctl add_user $user $pw    
+#设置用户权限为admin
+rabbitmqctl set_user_tags $user  administrator    
+#添加虚拟主机
+rabbitmqctl add_vhost $host       
+#为用户添加所需的虚拟主机
+rabbitmqctl  set_permissions -p ${host}  ${user} '.*' '.*' '.*'   
+rabbitmqctl  set_permissions -p ${pz}  ${user} '.*' '.*' '.*' 
+
+*///
