@@ -1,0 +1,28 @@
+
+思路： 
+
+1、备份昨天的日志的时候，同时删除之前五天时候备份的数据。
+
+2、复制日志文件，同时设置原日志文件为空
+
+shell：
+
+#!/bin/bash
+
+log_path='/home/wwwlogs/'
+log_bak_path='/home/wwwlogs_bak/'
+date_yesterday=$(date -d "yesterday" +"%Y-%m-%d")
+del_date=$(date -d "$date_yesterday 5 day ago" +"%Y-%m-%d")
+
+mkdir -p ${log_bak_path}${date_yesterday}
+
+for file in ls ${log_path}
+do
+        cp ${log_path}${file} ${log_bak_path}${date_yesterday}
+        echo '' > ${log_path}${file}
+done
+
+if [ -d ${log_bak_path}${del_date} ]
+then
+        rm -rf ${log_bak_path}${del_date}
+fi
